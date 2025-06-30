@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>どうしてEulerが一番好きな数学者か</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+  <style>
+    body {
+      font-family: 'Yu Gothic', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8em;
+      color: #2c3e50;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      display: block;
+      margin: 20px auto;
+    }
+
+    h2 {
+      border-left: 5px solid #3498db;
+      padding-left: 10px;
+      color: #2c3e50;
+    }
+
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    blockquote {
+      font-style: italic;
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-left: 5px solid #3498db;
+      margin: 20px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eeeeee;
+    }
+
+    form {
+      margin-top: 30px;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    input[type="submit"] {
+      background-color: #2ecc71;
+      color: white;
+      font-size: 14px;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>どうしてEulerが一番好きな数学者か</h1>
+    <nav>
+      <a href="#about">Eulerについて</a>
+      <a href="#works">仕事</a>
+      <a href="#feedback">あなたの意見</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="https://www.onthisday.com/images/people/leonhard-euler.jpg?w=360" alt="Eulerの写真">
+
+    <section id="about">
+      <p>
+        Euler（オイラー）は、たくさんの数学の分野で活やくしました。とても頭がよくて、たくさんのアイデアを作りました。だから私は彼が一番好きです。
+      </p>
+
+      <button onclick="toggleVisibility('facts')">Eulerについてもっと知る</button>
+      <div id="facts" class="hidden">
+        <ul>
+          <li>彼は目が見えなくなっても、数学を続けました。</li>
+          <li>\( e \), \( i \), \( f(x) \), \( \pi \) などの記号を使い始めました。</li>
+          <li>800以上の本と論文を書きました。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2>Eulerの主な仕事</h2>
+      <table>
+        <tr>
+          <th>分野</th>
+          <th>内容</th>
+        </tr>
+        <tr>
+          <td>微分積分</td>
+          <td>Eulerの方法、Euler–Maclaurinの公式</td>
+        </tr>
+        <tr>
+          <td>整数論</td>
+          <td>オイラーの定理、素数に関する研究</td>
+        </tr>
+        <tr>
+          <td>グラフ理論</td>
+          <td>ケーニヒスベルクの橋の問題</td>
+        </tr>
+        <tr>
+          <td>位相幾何</td>
+          <td>オイラーの多面体の公式</td>
+        </tr>
+        <tr>
+          <td>複素数</td>
+          <td>\( e^{i\pi} + 1 = 0 \) の公式</td>
+        </tr>
+      </table>
+    </section>
+    
+    <section id="feedback">
+      <h2>あなたの好きな数学者は？</h2>
+      <form>
+        <label for="name">名前：</label>
+        <input type="text" id="name" name="name">
+
+        <label for="mathematician">好きな数学者：</label>
+        <input type="text" id="mathematician" name="mathematician">
+
+        <label for="reason">その理由：</label>
+        <textarea id="reason" name="reason" rows="4"></textarea>
+
+        <input type="submit" value="送信">
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Gabriel de Farias.
+  </footer>
+
+  <script>
+    function toggleVisibility(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+  <p>
+  このプロジェクトのコードは  
+  <a href="https://github.com/seu-usuario/seu-repositorio" target="_blank">GitHub で見る</a>  
+  ことができます。
+	</p>
+
+</body>
+</html>
